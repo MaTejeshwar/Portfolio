@@ -41,8 +41,10 @@ const ProjectCard = ({
 
         {/* Live Site */}
         <div className="absolute inset-0 flex justify-end m-3 card-img_hover">
-          <div
-            onClick={() => window.open(live_site_link, "_blank", "noreferrer")}
+          <a
+            href={live_site_link}
+            target="_blank"
+            rel="noreferrer"
             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer"
           >
             <img
@@ -51,13 +53,13 @@ const ProjectCard = ({
               title="Live Site"
               className="w-2/3 h-2/3 object-contain"
             />
-          </div>
+          </a>
 
           {/* Github */}
-          <div
-            onClick={() =>
-              window.open(source_code_link, "_blank", "noreferrer")
-            }
+          <a
+            href={source_code_link}
+            target="_blank"
+            rel="noreferrer"
             className="black-gradient w-10 h-10 rounded-full flex justify-center items-center cursor-pointer ml-2"
           >
             <img
@@ -66,7 +68,7 @@ const ProjectCard = ({
               title="Github"
               className="w-1/2 h-1/2 object-contain"
             />
-          </div>
+          </a>
         </div>
       </div>
 
@@ -102,7 +104,7 @@ export const Works = () => {
         {/* About */}
         <div className="w-full flex">
           <motion.p
-            variants={fadeIn("", "", 0.1, 1)}
+            variants={fadeIn(undefined, undefined, 0.1, 1)}
             className="mt-3 text-secondary text-[17px] max-w-3xl leading-[30px]"
           >
             Following projects showcases my skills and experience through
